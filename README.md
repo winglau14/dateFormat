@@ -1,5 +1,6 @@
 # dateFormat
-# var option ={
+### 参数描述
+var option ={
         time: '2017-08-31 16:31:02',
         type: ['/', '/'],
         formatYear: false,
