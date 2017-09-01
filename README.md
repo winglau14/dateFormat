@@ -5,7 +5,7 @@ var option ={
         type: ['/', '/'],
         formatYear: false,
         formatDate: true
-     }<br/>
+     }
 time为需要转换的时间，格式可以是时间戳or时间字符串<br/>
 type为需要转换的格式类型，需是array，如需显示2017年08月01日格式，则传['年','月','日']，如需显示2017-08-01格式，则传['-','-','-']，如需显示2017/08/01格式，则传['/','/']<br/>
 formatYear为是否显示年月日，需是bool，true显示，false不显示<br/>
