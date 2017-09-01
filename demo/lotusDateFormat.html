@@ -26,13 +26,16 @@
         try {
             //修复ios 2017-8-31获取时间戳为NaN
             if (option) {
-                if (option.time && option.time.indexOf('-')) {
-                    option.time = option.time.replace(/-/g, '/');
+                if(option.time instanceof String){
+                    if (option.time && option.time.indexOf('-')) {
+                        option.time = option.time.replace(/-/g, '/');
+                    }
                 }
                 var curDate = option.time ? new Date(option.time).toLocaleString() : new Date().toLocaleString();
             } else {
                 var curDate = new Date().toLocaleString();
             }
+            console.log(curDate);
             var reg = /(\d{1,}\/\d{1,}\/\d{1,}).(上午|下午)(\d{1,}):(\d{1,}):(\d{1,})/;
             var timeArray = curDate.match(reg);
             var yearStr = timeArray[1];//匹配到年月日
@@ -127,5 +130,9 @@
         time: '2017-9-1 16:31:02',
         type: ['年', '月', '日']
     });
+    forMatDate({
+        time:1501516800000,
+        formatYear:true
+    })
 </script>
 </html>
